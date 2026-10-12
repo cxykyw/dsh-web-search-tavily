@@ -1,0 +1,19 @@
+# Bundle patch of dsh-tavily-cxykyw, applied after the dsh-base layer:
+#
+#   1. inserts the Tavily search provider row on the ctx.web seam;
+#   2. points the seam's searchProvider at it, keeping the shipped anonymous
+#      HTTP fetch provider for web_fetch.
+#
+# Credentials deliberately do NOT live here. The API key is resolved at every
+# search from the literal `apiKey` (if you set one in YOUR profile patch), then
+# the credentials service (~/.dsh/.credentials.yaml), then the launch
+# environment / process environment (TAVILY_API_KEY by default).
+
+- insert:
+    - id: web-search-tavily
+      name: dsh-tavily-cxykyw
+
+- id: web
+  config:
+    searchProvider: tavily
+    fetchProvider: http

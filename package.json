@@ -1,0 +1,57 @@
+{
+  "name": "dsh-tavily-cxykyw",
+  "version": "0.1.0",
+  "description": "Tavily-backed WebSearchProvider for the DeepSeek Harness web capability seam (ctx.web)",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "plugin",
+    "web-search",
+    "search",
+    "tavily",
+    "cordis"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "cxykyw"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxykyw/dsh-web-search-tavily.git"
+  },
+  "homepage": "https://github.com/cxykyw/dsh-web-search-tavily#readme",
+  "bugs": {
+    "url": "https://github.com/cxykyw/dsh-web-search-tavily/issues"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.4"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-credentials": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-launch-environment": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-web": "^0.2.0-rc.2"
+  }
+}

@@ -1,0 +1,18 @@
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# never commit credentials or machine-local overrides
+.env
+.env.*
+.npmrc
+*.local.yml
+*.local.yaml
+cordis.local.yml
+credentials*.yml
+credentials*.yaml
+
+.DS_Store
+Thumbs.db
+*.tgz
